@@ -80,4 +80,27 @@ nav a:hover{
 nav a.router-link-exact-active {
   border-bottom:2px solid #42b983;
 }
+
+@media screen and (max-width: 768px){
+  header .head{
+    padding: 0px 0px;
+  }
+
+  header{
+    padding: 0px;
+  }
+
+  .title a img{
+    width: 150%;
+    margin-left: 20px;
+  }
+
+  nav a:nth-child(1){
+    display: none;
+  }
+
+  nav{
+    justify-content: space-around;
+  }
+}
 </style>

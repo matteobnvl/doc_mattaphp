@@ -3,8 +3,8 @@
         <h1>MattaPHP</h1>
         <h2>Une framework php simple et minimaliste</h2>
         <div class="box-btn">
-            <a href="#">Get start</a>
-            <a href="#">View on github</a>
+            <RouterLink to="/docs/installation">Get start <i class="bi bi-rocket"></i></RouterLink>
+            <a target="_blank" href="https://github.com/matteobnvl/mattaphp">View on github <i class="bi bi-github"></i></a>
         </div>
     </div>
 </template>
@@ -30,6 +30,12 @@ export default{
     padding: 5px;
     text-decoration: none;
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .box-btn a{
+        width: 45%;
+    }
 }
 
 </style>

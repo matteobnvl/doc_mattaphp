@@ -4,7 +4,7 @@
   <footer>
     <p>
       Copyright © 2023 mattaphp.matteo-bonneval.fr - Tous droits réservés - développé par 
-      <a class="link" href="https://matteo-bonneval.fr" >Bonneval Mattéo</a>
+      <a class="link" href="https://matteo-bonneval.fr" target="_blank" >Bonneval Mattéo</a>
     </p>
   </footer>
 </template>

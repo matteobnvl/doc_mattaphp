@@ -20,13 +20,16 @@ export default {
         }
     },
     mounted() {
+        const isMobile = window.innerWidth < 800; // Vérifie si la largeur de l'écran est inférieure à 800px
+
+        const editorWidth = isMobile ? '100%' : '75%';
         CodeMirror.fromTextArea(document.getElementById(this.el), {
             lineNumbers: true,
             theme: 'yonce',
             mode: 'php',
             readOnly: "nocursor",
             smartIndent: true
-        }).setSize('75%', 'auto')
+        }).setSize(editorWidth, 'auto')
     }
 }
 </script>
@@ -34,6 +37,5 @@ export default {
 <style>
 textarea{
     border-radius: 10px;
-    
 }
 </style>

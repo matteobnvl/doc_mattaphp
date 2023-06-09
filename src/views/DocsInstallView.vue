@@ -2,6 +2,7 @@
     <section class="contain">
       <SideBarComponents />
       <div class="box">
+        <div class="burger"><i class="bi bi-list"></i></div>
         <component :is="this.$route.params.components" />
       </div>
       <div class="box-progress">
@@ -53,6 +54,14 @@ export default{
   mounted() {
     window.addEventListener('scroll', this.getScroll);
     this.getScroll();
+
+    const burger = document.querySelector('.burger')
+    const sidebar = document.querySelector('.sidebar')
+
+    burger.addEventListener('click', function() {
+      burger.classList.toggle('active')
+      sidebar.classList.toggle('active')
+    })
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.getScroll);
@@ -75,6 +84,7 @@ export default{
 </script>
 
 <style>
+
 .contain{
   width: 100%;
   margin-top: 5vh;
@@ -92,9 +102,10 @@ h1 {
 h2{
     margin-bottom: 5vh;
 }
-p{
+.box p{
     width: 70%;
     text-align: left;
+    margin:5vh 0px;
 }
 .code{
     width: 100%;
@@ -149,4 +160,48 @@ code{
   margin: 30px 0px;
 }
 
+.burger{
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .box-progress{
+    display: none;
+  }
+
+  .burger{
+    display: block;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    background-color: #282c31;
+    text-align: center;
+    border-radius: 15px;
+  }
+
+  .burger.active{
+    margin-left: auto;
+    transition: margin-left .4s;
+  }
+
+  .burger i{
+    font-size: 2rem;
+    text-align: center;
+    margin: auto;
+  }
+
+  .box{
+    width: 95%;
+    margin: auto;
+  }
+
+  .box p{
+    width: 100%;
+  }
+
+  .div{
+    width: 100%;
+  }
+}
 </style>

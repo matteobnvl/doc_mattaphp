@@ -37,40 +37,44 @@
     <h2>Méthode disponible</h2>
     <p>
         Plusieurs méthode sont déjà disponible dans le moteur de template twig:
-        <ul>
-            <li>
-                <code>route()</code> qui permet d'appeler une route depuis la view avec son nom,
-                et de fournir aussi le nombre de paramètre requis pour cette route (<code>{'id_user': param}</code>)
-            </li>
-            <li>
-                <code>intervalleDate()</code> qui permet de faire l'intervalle entre deux dates et de le renvoyer
-                au format texte, (x ans, y mois, z jours ou z jours).
-            </li>
-            <li>
-                <code>isConnected()</code> retourne true si l'utilisateur est connecté sinon false.
-            </li>
-        </ul>
-
-        <br><br>
-
-        Ces fonctions peuvent être appelé partous, plus voici d'autres fonctions qui peuvent être appelé dans le
-        controlle ou autres :
-        <ul>
-            <li>
-                <code>redirect()</code> qui permet depuis le controller de faire une redirection avec la possibilité
-                d'y ajouter un paramètre.
-            </li>
-            <li>
-                <code>datediff()</code> qui fait la différence entre deux dates et renvoie la valeur de timestamp
-                de leurs soustraction.
-            </li>
-            <li>
-                <code>getCurrentRoute()</code> retour la route sur laquelle nous sommes.
-            </li>
-            <li>
-                <code>env()</code> qui permet de retourner une valeur du fichier .env
-            </li>
-        </ul>
+    
+    </p>
+    <ul class="ul">
+        <li>
+            <code>route()</code> qui permet d'appeler une route depuis la view avec son nom,
+            et de fournir aussi le nombre de paramètre requis pour cette route (<code>{'id_user': param}</code>)
+        </li>
+        <li>
+            <code>intervalleDate()</code> qui permet de faire l'intervalle entre deux dates et de le renvoyer
+            au format texte, (x ans, y mois, z jours ou z jours).
+        </li>
+        <li>
+            <code>isConnected()</code> retourne true si l'utilisateur est connecté sinon false.
+        </li>
+    </ul>
+    <p>
+    Ces fonctions peuvent être appelé partous, plus voici d'autres fonctions qui peuvent être appelé dans le
+    controlle ou autres :
+    </p>
+    <ul class="ul">
+        <li>
+            <code>redirect()</code> qui permet depuis le controller de faire une redirection avec la possibilité
+            d'y ajouter un paramètre.
+        </li>
+        <li>
+            <code>datediff()</code> qui fait la différence entre deux dates et renvoie la valeur de timestamp
+            de leurs soustraction.
+        </li>
+        <li>
+            <code>getCurrentRoute()</code> retour la route sur laquelle nous sommes.
+        </li>
+        <li>
+            <code>env()</code> qui permet de retourner une valeur du fichier .env
+        </li>
+    </ul>
+    <p>
+        Si vous voulez rajouter une fonction générale qui ne sera pas utilisé dans le moteur de template vous
+        pouvez la rajouter dans le fichier <code>app/functions.php</code>
     </p>
     <h2>Page d'erreur</h2>
 
@@ -162,4 +166,10 @@ class TwigExtensions extends AbstractExtension
 }
 </script>
 
+<style>
 
+
+.ul {
+    width: 70%;
+}
+</style>

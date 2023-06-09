@@ -71,5 +71,23 @@ i{
     margin-left: 10px;
     margin-right: 20px;
 }
+@media screen and (max-width: 768px){
+    .sidebar{
+        position: absolute;
+        left: -50vw;
+        transition: left .4s;
+    }
+
+    .sidebar.active{
+        left: 0;
+        transition: left .4s;
+        width: 80vw;
+        background-color: #282c31;
+        z-index: 999;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+    }
+}
 </style>
 
