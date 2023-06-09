@@ -58,6 +58,15 @@ export default{
     const burger = document.querySelector('.burger')
     const sidebar = document.querySelector('.sidebar')
 
+    const menuLinks = document.querySelectorAll('.sidebar .sidebar-menu .sidebar-menu-item a');
+
+    menuLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            burger.classList.remove('active');
+            sidebar.classList.remove('active');
+        });
+    });
+
     burger.addEventListener('click', function() {
       burger.classList.toggle('active')
       sidebar.classList.toggle('active')
